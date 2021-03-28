@@ -27,16 +27,22 @@ cards:= [] types.Card{
 		Balance:  899,
 		Active:   false,
 	},
+	{
+		PAN :     "6768 6845 3456",
+		Balance:  89512,
+		Active:   true,
+	},
 }
 
-	paymentsSource:=PaymentSources(cards)
-	for _, paymentSource := range paymentsSource {
+	PaymentSources:=PaymentSources(cards)
+	for _, paymentSource := range PaymentSources {
 
 		fmt.Println(paymentSource.Balance)
 	}
 	
 
 	//Output: 58949
+	// 89512
 	
 }
 
