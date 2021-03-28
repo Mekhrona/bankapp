@@ -29,7 +29,7 @@ cards:= [] types.Card{
 	},
 }
 
-	paymentsSource:=PaymentSources(cards)
+	paymentsSource:=PaymentSource(cards)
 	for _, paymentSource := range paymentsSource {
 
 		fmt.Println(paymentSource.Balance)
