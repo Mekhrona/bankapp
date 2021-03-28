@@ -14,13 +14,18 @@ func ExampleTotal() {
 			Active: false,
 		},
 		{
-			Balance: 10_000_00,
+			Balance: 90_000_00,
+			Active: false,
+		},
+
+		{
+			Balance: 985,
 			Active: true,
 		},
 	}
 
 	fmt.Println(Total(cards))
 	
-	//Output: 1000000
+	//Output: 985
 	
 }

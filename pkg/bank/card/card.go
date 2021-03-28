@@ -5,14 +5,18 @@ import
 "bank/pkg/bank/types" 
 
 
-var total types.Money=0
 func Total(cards []types.Card)  types.Money{
-
+sum:=types.Money(0)
 	for _,card := range cards {
 
-		if card.Balance>0 && card.Active {
-		total+=card.Balance
-		}	
+		if !card.Active {
+		continue
+		}
+		if card.Balance<=0 {
+			continue
+			}
+		sum+=card.Balance
 	}
-	return total
+
+	return sum
 }
