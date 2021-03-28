@@ -2,7 +2,7 @@ package payment
 
 import "bank/pkg/bank/types"
 
-func PaymentSource(cards []types.Card) []types.PaymentSource {
+func PaymentSources(cards []types.Card) []types.PaymentSource {
 	var paymentsSource []types.PaymentSource
 	for _, card := range cards {
 
